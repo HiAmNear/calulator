@@ -1,0 +1,119 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link rel="stylesheet" href="calculator.css">
+        <script src="calculator.js"></script>
+    </head>
+    <body>
+        <div id="Container">
+            <table id="table_1">
+                <tr>
+                    <td id="result_container">
+                        <input id="calculating" class="calculating_past" disabled>
+                        <input id="calculating" class="calculating_result" disabled>
+                        <input id="calculating" class="calculating_input">
+                    </td>
+                </tr>
+            </table>
+            <table id="table_2">
+                <tr>
+                    <td id="number_1" class="number">
+                        <button id="container_number container_1"
+                        onclick="Button_clicked('1')">1</button>
+                    </td>
+                    <td id="number_2" class="number">
+                        <button id="container_number container_2"
+                        onclick="Button_clicked('2')">2</button>
+                    </td>
+                    <td id="number_3" class="number">
+                        <button id="container_number container_3"
+                        onclick="Button_clicked('3')">3</button>
+                    </td>
+                    <td id="plus" class="number">
+                        <button id="plus"
+                        onclick="Button_clicked('+')">+</button>
+                    </td>
+                    <td>
+                        <div id="int_float_container">
+                            <label class="container">
+                                <label id="int_float_choice">Int</label>
+                                <input id="int_radio" type="radio" checked="checked" name="radio" value="1">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div id="int_float_container">
+                            <label class="container">
+                                <label id="int_float_choice">Float</label>
+                                <input id="float_radio" type="radio" checked="checked" name="radio" value="2">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="number_4" class="number">
+                        <button id="container_number container_4"
+                        onclick="Button_clicked('4')">4</button>
+                    </td>
+                    <td id="number_5" class="number">
+                        <button id="container_number container_5"
+                        onclick="Button_clicked('5')">5</button>
+                    </td>
+                    <td id="number_6" class="number">
+                        <button id="container_number container_6"
+                        onclick="Button_clicked('6')">6</button>
+                    </td>
+                    <td id="minus" class="number">
+                        <button id="minus"
+                        onclick="Button_clicked('-')">-</button>
+                    </td>
+                    <td class="number">
+                        <button id="container_number Del"
+                        onclick="Button_DEL()">Del</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="number_7" class="number">
+                        <button id="container_number container_7"
+                        onclick="Button_clicked('7')">7</button>
+                    </td>
+                    <td id="number_8" class="number">
+                        <button id="container_number container_8"
+                        onclick="Button_clicked('8')">8</button>
+                    </td>
+                    <td id="number_9" class="number">
+                        <button id="container_number container_9"
+                        onclick="Button_clicked('9')">9</button>
+                    </td>
+                    <td id="multiplication" class="number">
+                        <button id="multiplication"
+                        onclick="Button_clicked('*')">*</button>
+                    </td>
+                    <td class="number">
+                        <button id="container_number Clear"
+                        onclick="Button_Clear()">Clear</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="number_0" class="number">
+                        <button id="container_number container_0"
+                        onclick="Button_clicked('0')">0</button>
+                    </td>
+                    <td id="dot_sign" class="number">
+                        <button id="dot_sign"
+                        onclick="Button_clicked('.')">.</button>
+                    </td>
+                    <td id="division" class="number">
+                        <button id="container_division"
+                        onclick="Button_clicked('÷')">÷</button>
+                    </td>
+                    <td id="equal" class="number">
+                        <button id="equal"
+                        onclick="Button_Calculate()">=</button>
+                    </td>
+                </tr>
+            <table>
+        <div>
+    </body>
+</html>
