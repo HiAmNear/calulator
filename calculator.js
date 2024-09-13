@@ -37,7 +37,7 @@ function Button_Calculate(){
             // Nếu ký tự sau 'Ans' là một số nguyên, thêm dấu '*'
             if (charAfterAns.match(/\d/)) { // Kiểm tra nếu ký tự sau 'Ans' là số
                 calculating_input = calculating_input.replace('Ans',  result_value + '*');
-            } else if (['+', '-', '*', '÷'].includes(charAfterAns)) { // Nếu là toán tử, thay thế nguyên
+            } else if (['+', '-', '*', '÷',''].includes(charAfterAns)) { // Nếu là toán tử, thay thế nguyên
                 calculating_input = calculating_input.replace('Ans', result_value);
             }
             
