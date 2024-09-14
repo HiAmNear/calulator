@@ -11,9 +11,18 @@ function Button_clicked(calculator_String){
     document.querySelector('.calculating_input').value += calculator_String
 }
 
-function Button_DEL(){
+function Button_DEL() {
     let inputField = document.querySelector('.calculating_input');
-    inputField.value = inputField.value.slice(0, -1);
+    let value = inputField.value;
+
+    // Kiểm tra nếu ba ký tự cuối cùng là "Ans"
+    if (value.slice(-3) === 'Ans') {
+        // Xóa "Ans" nếu nó có
+        inputField.value = value.slice(0, -3);
+    } else {
+        // Nếu không phải "Ans", xóa ký tự cuối cùng như bình thường
+        inputField.value = value.slice(0, -1);
+    }
 }
 
 function Button_Clear(){

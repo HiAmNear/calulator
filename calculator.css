@@ -4,9 +4,10 @@
     background-color: #704E2E;
     border-radius: 5px;
     padding: 10px;
+    border: 3px solid black;
 }
 body{
-    background-color: aqua;
+  background: linear-gradient(to bottom, #B3E5FC, #81D4FA, #4FC3F7, #29B6F6);
 }
 tbody{
     display: block;
@@ -19,25 +20,30 @@ td{
     justify-content: center;
 }
 
-.number button{
-    background-color: #cefad0;
-    width: 80%;
-    height: 60%;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 24px;
-    border: 1px solid black;
+.number button {
+  background-color: #cefad0;
+  width: 80%;
+  height: 60%;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 24px;
+  border: 1px solid black;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    cursor: pointer;
-}
-.number button:hover{
-    background-color: hsl(202, 91%, 69%);
+  cursor: pointer;
 }
 
+.number button:hover {
+  background-color: hsl(202, 91%, 69%);
+}
+
+.number button:active {
+  transform: scale(0.95);
+  background-color: hsl(202, 91%, 59%);
+}
 
 #int_float_container{
     display: flex;
@@ -144,3 +150,169 @@ label#int_float_choice{
     background: #704E2E;
     border: 1px solid black;
   }
+
+  /*from this part i'll set decoration for this page*/
+
+  @media screen and (min-width: 1024px){
+    #Container{
+      position: relative;
+      left:40%;
+      top:30%;
+    }
+
+        /* Container cho nhánh cây */
+    .tree-branch-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Lá cây */
+    .leaf {
+      position: absolute;
+      width: 30px;
+      height: 15px;
+      background-color: #32CD32; /* Màu xanh cho lá */
+      border-radius: 50% / 100%; /* Tạo hình elip */
+    }
+
+    /* Trùm lá cây */
+    .leaf-cluster {
+      position: absolute;
+      bottom: 100%; /* Đặt trùm lá ở trên thân cây */
+      left: 0%;
+      width: 100%;
+      height: 25%;
+      background: radial-gradient(circle at center, #228B22, #006400); /* Gradient xanh cho lá */
+      border-radius: 50% 50% 0 0; /* Tạo hình tròn liền mạch */
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); /* Tạo bóng bên trong để thêm chiều sâu */
+    }
+
+    /* Thêm hiệu ứng cho lá */
+    .leaf-cluster::before {
+      content: '';
+      position: absolute;
+      width: 146%;
+      height: 193%;
+      background: radial-gradient(circle at center, #228B22, #006400);
+      border-radius: 50%;
+      top: -141px;
+      left: 50%;
+      transform: translateX(-50%) scale(1.1);
+      border: 1px solid black;
+    }
+
+    .glass_container{
+      position: relative;
+      height:20%;
+      width: 110%;
+      border-radius:50% 50% 0 0;
+      background-color: greenyellow;
+      top: 29%;
+      right: 5%;
+    }
+
+        /* Các lưỡi cỏ */
+    .grass {
+      position: absolute;
+      width: 20px;
+      height: 100px;
+      background-color: #32CD32; /* Màu cỏ */
+      border-radius: 10px 10px 0 0; /* Đầu cong của lưỡi cỏ */
+      bottom: 0;
+      transform: rotate(-10deg); /* Tạo góc nghiêng cho lưỡi cỏ */
+    }
+
+    /* Thay đổi vị trí và góc xoay của các lưỡi cỏ để trông ngẫu nhiên hơn */
+    .grass1 {
+      left: 10%;
+      transform: rotate(-15deg);
+    }
+
+    .grass2 {
+      left: 25%;
+      transform: rotate(10deg);
+    }
+
+    .grass3 {
+      left: 40%;
+      transform: rotate(-5deg);
+    }
+
+    .grass4 {
+      left: 60%;
+      transform: rotate(15deg);
+    }
+
+    .grass5 {
+      left: 75%;
+      transform: rotate(-10deg);
+    }
+
+    .grass6 {
+      left: 90%;
+      transform: rotate(15deg);
+    }
+
+    /* Tạo kiểu đám mây */
+    .cloud {
+      width: 200px;
+      height: 100px;
+      background: #fff;
+      border-radius: 100px;
+      position: absolute;
+      box-shadow: 50px 50px 0 0 #fff, 100px 80px 0 0 #fff;
+    }
+
+    /* Tạo nhiều đám mây và đặt chúng với các vị trí, kích thước khác nhau */
+    .cloud1 {
+      top: 5%;
+      left: -200px;
+      animation: moveCloudsLEFT 30s linear infinite;
+    }
+
+    .cloud2 {
+      top: 25%;
+      left: -300px;
+      animation: moveCloudsLEFT 35s linear infinite;
+      width: 250px;
+      height: 120px;
+      box-shadow: -35px 60px 0 0 #fff, 50px 99px 0 0 #fff;
+    }
+
+    .cloud3 {
+      top: 40%;
+      left: -150px;
+      animation: moveCloudsRIGHT 40s linear infinite;
+      width: 180px;
+      height: 90px;
+      box-shadow: 126px -31px 0 0 #fff, 72px 41px 0 0 #fff;
+    }
+
+    .cloud4 {
+      top: 55%;
+      left: -400px;
+      animation: moveCloudsRIGHT 30s linear infinite;
+      width: 220px;
+      height: 110px;
+      box-shadow: -62px 55px 0 0 #fff, 72px 54px 0 0 #fff;
+    }
+
+    /* Animation cho đám mây di chuyển từ trái sang phải */
+    @keyframes moveCloudsLEFT {
+      0% {
+        left: -300px; /* Xuất phát từ ngoài màn hình */
+      }
+      100% {
+        left: 100%; /* Kết thúc ngoài màn hình bên phải */
+      }
+    }
+    @keyframes moveCloudsRIGHT {
+      0% {
+        left: 100%; /* Xuất phát từ ngoài màn hình bên phải */
+      }
+      100% {
+        left: -300px; /* Kết thúc ngoài màn hình bên trái */
+      }
+    }
+}
